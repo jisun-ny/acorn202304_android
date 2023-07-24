@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-        //[방법2] -> MainActivity를 implements 할 필요 없다.
+        //[방법2] -> MainActivity를 implements 할 필요 없다.pp
         Button sendBtn2 = findViewById(R.id.sendBtn2);
         sendBtn2.setOnClickListener(view -> {
             // 1. EditText에 입력한 문자열을 읽어와서

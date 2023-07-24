@@ -5,41 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical"
-    >
-
-    <ListView
-        android:id="@+id/listView"
+    android:orientation="vertical">
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        />
-    <!--
-       android:layout_height="0dp"
-       android:layout_weight="1"
-       일단 높이는 안가지고, 남는건 그냥 내가 다 가질게
-       EditText가 높이 가지고, button도 높이 가지고 나머지 다 ListView가 갖기
-   -->
-
-
-    <!-- 레이아웃 중첩시키기 -->
+        android:id="@+id/editText"
+        android:focusable="false"
+        android:background="#00ff00"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <EditText
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:id="@+id/inputName"
-            android:hint="이름 입력"/>
+            android:id="@+id/inputUrl"
+            android:text="https://acornacademy.co.kr/index.jsp" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="추가"
-            android:id="@+id/addBtn"
-            />
+            android:text="요청"
+            android:id="@+id/requestBtn"/>
     </LinearLayout>
+
 </LinearLayout>

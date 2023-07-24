@@ -17,7 +17,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //이동 버튼의 참조값 얻어오기
         Button moveBtn = findViewById(R.id.moveBtn);
         //버튼을 눌렀을 때 동작하기 위한 리스너 등록
-        moveBtn.setOnClickListener(this); //인터페이스 타입으로 implement필요 -> implement받았기 때문에 this(MainActivity)는 OnClickListener이기도 한 것
+        moveBtn.setOnClickListener(this);
+        //인터페이스 타입으로 implement필요
+        // -> implement받았기 때문에 this(MainActivity)는 OnClickListener이기도 한 것
     }
 
     //버튼을 눌렀을 때 아래의 메소드가 실행된다.

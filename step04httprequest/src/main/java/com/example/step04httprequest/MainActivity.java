@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             //RequestTask 내부 클래스를 만들어놓고 execute하면 밑에 doInBackground()가 실행된다.
                 new RequestTask().execute(url); //이 메소드는 호출 즉시 리턴된다.
             //3. 정상적으로 응답이 되면 응답된 문자열을 EditText 출력하기
+            //onPostExecute()
         });
     }
 
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
             //strings 의 0 번방에 요청 url 이 들어 있다.
             try {
-                //요청 url 을 생성자의 인자로 전달해서 URL 객체를 생성한다.
+                //요청 url 을 생성자의 인자로 전달해서 URL 객체를 생성한다. //배열의 0번방에 위에서 전달한 url객체가 들어있다.
                 URL url = new URL(strings[0]);
                 //URLConnection 객체를 원래 type (자식 type) 으로 casting 해서 받는다.
                 HttpURLConnection conn=(HttpURLConnection) url.openConnection();
@@ -63,10 +64,10 @@ public class MainActivity extends AppCompatActivity {
                 if(conn != null){
                     conn.setConnectTimeout(20000); //응답을 기다리는 최대 대기 시간
                     conn.setRequestMethod("GET");// 요청 메소드 설정 (Default 는 GET)
-                    conn.setUseCaches(false);//케쉬 사용 여부
+                    conn.setUseCaches(false);//캐쉬 사용 여부
                     //응답 코드를 읽어온다.
                     int responseCode=conn.getResponseCode();
-                    if(responseCode == HttpURLConnection.HTTP_OK){ //정상 응답이라면
+                    if(responseCode == HttpURLConnection.HTTP_OK){ //정상 응답이라면 //HTTP_OK --> 200번
                         //문자열을 읽어들일수 있는 객체의 참조값 얻어오기
                         BufferedReader br=new BufferedReader(new InputStreamReader(conn.getInputStream()));
                         //반복문 돌면서
