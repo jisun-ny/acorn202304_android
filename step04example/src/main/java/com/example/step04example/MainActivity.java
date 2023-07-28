@@ -79,8 +79,9 @@ public class MainActivity extends AppCompatActivity implements Util.RequestListe
     @Override
     public void onSuccess(int requestId, Map<String, Object> result) {
         if (requestId == 0) {
-            //서버가 응답한 문자열을 editText에다가 출력하기
+            //서버가 응답한 문자열 가져와서
             String data = (String) result.get("data");
+            // editText에다가 출력하기
             editText.setText(data);
         } else if (requestId == 1) {
             //서버가 응답한 문자열을 editText에다가 출력하기
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements Util.RequestListe
                 //자바에서는 불리언이면 불리언 인트면 인트.. 각각 메소드를 사용해야함.
 
                 editText.setText(Boolean.toString(isSuccess));
-                
+
             } catch (JSONException e) {
                 //data가 json 형식에 어긋나면 예외가 발생한다.
                 editText.setText(e.getMessage());
