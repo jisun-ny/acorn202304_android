@@ -30,6 +30,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
+    //DBHelper객체를 생성할 때 version 숫자가 올라가면(변경되면) 호출되는 메소드
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         //업그레이드 할 내용을 작성하면 된다.

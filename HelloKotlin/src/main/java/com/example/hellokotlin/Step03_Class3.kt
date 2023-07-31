@@ -8,6 +8,8 @@ class Cat constructor(){
     }
     //뒤늦은 초기화가 가능한 필드 lateinit 예약어 붙여서 선언
     lateinit var name:String
+
+    //대표 생성자 외에 추가로 만들고 싶으면 클래스 안에다가 만들면 된다. (어쨋든 대표생성자는 호출 되어야하므로 this() 붙여야함..?)
     constructor(name:String) : this() { //this(): primary 생성자를 호출하는 표현식
         println("야옹이의 이름은:${name}")
         this.name = name
@@ -53,7 +55,7 @@ fun main(){
     은 10이 진짜 들어간느게 아니라
     힙 영역에 23번 방에 10이라는 숫자가 들어가고 23번 참조값을 myNum에 넣어준 것.
 
-    즉, Int타입을 초기화하기 위한 빈 공간을 넣어줄 수 있다 (자바에서는 Integer에 null넣을 수 없다 초기화하기 위해서 0을 넣어줬었음)
+    즉, Int타입을 초기화하기 위한 빈 공간을 넣어줄 수 있다 (자바에서는 Integer(기본데이터타입)에 null넣을 수 없다 초기화하기 위해서 0을 넣어줬었음)
      */
     //Int(숫자) type도 null을 넣어 놓고 값을 나중에 대입할 수 있다.
     var myNum:Int? = null;
